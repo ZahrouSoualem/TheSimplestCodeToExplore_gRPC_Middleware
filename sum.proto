@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package sum;
+
+option go_package = "/sum";
+
+
+message Variabls{
+    int32 num  = 1;
+    int32 num2  = 2;
+}
+
+message Result {
+    int32 Thesum  = 3;
+}
+
+service SumService{
+    rpc SumThevalue(Variabls) returns (Result){}
+}
